@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Profile</title>
+
+  <!-- Optional CSS (Bonus) -->
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    p {
+      line-height: 1.6;
+      color: #555;
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      margin: 20px auto;
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    form {
+      margin-top: 30px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 1. Heading (Name) -->
+    <h1>Chala Abdi</h1>
+
+    <!-- 2. Short Bio Paragraph -->
+    <p>
+      Hello! My name is Chala. I am a student interested in technology and
+      software development. I enjoy learning new skills, building projects, and
+      exploring how the web works.
+    </p>
+
+    <!-- 3. Image -->
+    <img src="images/chala_image.png" alt="Profile image" />
+
+    <!-- 4. Contact Form -->
+    <form id="contactForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- Optional JavaScript (Bonus) -->
+  <script>
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      alert('Thank you! Your message has been submitted.');
+      form.reset();
+    });
+  </script>
+</body>
+</html>
