@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Personal Profile</title>
+    <style>
+        :root{
+            /* --bg-img: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1500&q=60'); */
+            --bg-img: url('https://images.unsplash.com/photo-1536148935331-408321065b18?auto=format&fit=crop&w=1600&q=80');
+            --accent:#4b7bec;
+            --muted:#6b7280;
+            --card:#ffffffcc;
+            --radius:10px;
+            box-sizing: border-box;
+        }
+        *,*::before,*::after{box-sizing:inherit}
+        html,body{height:100%;margin:0;font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+        body{
+            background:
+                linear-gradient(rgba(10,10,25,0.55), rgba(10,10,25,0.55)),
+                var(--bg-img) center/cover no-repeat fixed;
+            color:#fff;line-height:1.4;padding:24px;
+            display:block; /* explicit use of display:block */
+        }
+
+        .container{max-width:1000px;margin:0 auto;}
+
+        /* Header */
+        header{
+            text-align:center;
+            margin-bottom:28px;
+        }
+        h1{
+            font-size:2rem;
+            font-weight:800;
+            letter-spacing:0.6px;
+            text-transform:uppercase; /* text-transform usage */
+            margin:0 0 6px 0;
+            display:block; /* explicit */
+        }
+        .role{
+            display:inline-block; /* display:inline-block usage */
+            font-weight:600;
+            color:var(--card);
+            background:#0000001a;
+            padding:6px 10px;
+            border-radius:8px;
+            font-size:0.95rem;
+            text-transform:none;
+        }
+
+        /* Profile (flex layout) */
+        .profile{
+            display:flex;
+            gap:20px;
+            align-items:center; /* align-items usage */
+            justify-content:space-between; /* justify-content usage */
+            background:rgba(255,255,255,0.06);
+            padding:18px;
+            border-radius:var(--radius);
+            margin-bottom:22px;
+            flex-direction:row; /* flex-direction usage */
+        }
+        .profile .avatar{
+            flex:0 0 160px;
+            max-width:160px;
+            border-radius:12px;
+            overflow:hidden;
+            border:3px solid rgba(255,255,255,0.08);
+            background:#fff;
+        }
+        .avatar img{width:100%;height:auto;display:block;}
+        .bio{
+            color:#f3f4f6;
+            font-size:0.98rem;
+            line-height:1.6;
+            flex:1;
+        }
+
+        /* Skills (grid layout) */
+        .skills{
+            margin:22px 0;
+        }
+        .skills h2{
+            margin:0 0 12px 0;
+            font-size:1.1rem;
+            text-transform:uppercase;
+            letter-spacing:0.8px;
+        }
+        .skills-grid{
+            display:grid; /* grid usage */
+            grid-template-columns:repeat(4,1fr); /* grid-template-columns usage */
+            gap:16px; /* gap usage */
+        }
+        .skill-item{
+            background:var(--card);
+            color:#0b1220;
+            padding:16px;
+            text-align:center;
+            border-radius:10px;
+            font-weight:600;
+            box-shadow:0 2px 6px rgba(0,0,0,0.12);
+            display:flex;
+            align-items:center;
+            justify-content:center;
+        }
+
+        /* Contact form */
+        .contact{
+            background:rgba(255,255,255,0.04);
+            padding:18px;
+            border-radius:var(--radius);
+            margin-bottom:24px;
+        }
+        .contact h2{margin:0 0 12px 0;font-size:1.05rem;}
+        form{display:block;}
+        .form-row{display:flex;gap:12px;margin-bottom:12px;}
+        .form-row .field{flex:1}
+        label{display:inline-block;margin-bottom:6px;font-size:0.85rem;color:var(--card);}
+        input[type="text"],input[type="email"],textarea{
+            width:100%;
+            padding:10px 12px;
+            border-radius:8px;
+            border:1px solid rgba(255,255,255,0.12);
+            background:rgba(255,255,255,0.02);
+            color:#fff;
+            font-size:0.95rem;
+        }
+        textarea{min-height:110px;resize:vertical}
+        button[type="submit"]{
+            margin-top:6px;
+            background:var(--accent);
+            color:#fff;
+            border:none;
+            padding:10px 16px;
+            border-radius:8px;
+            font-weight:700;
+            cursor:pointer;
+        }
+
+        /* Footer */
+        footer{
+            text-align:center;
+            color:var(--muted);
+            margin-top:20px;
+            font-size:0.9rem;
+        }
+        footer .name{display:inline;color:#fff;font-weight:600;margin-right:8px;}
+
+        /* Responsive */
+        @media (max-width:800px){
+            .skills-grid{grid-template-columns:repeat(2,1fr)}
+            .profile{flex-direction:column;align-items:flex-start}
+            .profile .avatar{flex:0 0 120px;max-width:120px;}
+        }
+        @media (max-width:480px){
+            body{padding:16px}
+            h1{font-size:1.4rem}
+            .skills-grid{grid-template-columns:1fr} /* grid to 1 column on small screens */
+            .form-row{flex-direction:column}
+            .profile{padding:14px}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Abdi Dabala</h1>
+            <div class="role">Software Engineering Student</div>
+        </header>
+
+        <section class="profile" aria-label="Profile">
+            <div class="avatar">
+                <img src="../assets/chala_image.png" alt="Profile photo of Abdi Dabala">
+            </div>
+            <div class="bio">
+                <p>
+                    Hi — I'm Abdi, a software engineering student passionate about building clean, accessible web interfaces and learning modern front-end techniques.
+                    I enjoy solving problems, collaborating on projects, and experimenting with UI/UX design.
+                </p>
+            </div>
+        </section>
+
+        <section class="skills" aria-label="Skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">HTML &amp; CSS</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Responsive Design</div>
+                <div class="skill-item">Git &amp; GitHub</div>
+            </div>
+        </section>
+
+        <section class="contact" aria-label="Contact">
+            <h2>Contact Me</h2>
+            <form action="#" method="post" novalidate>
+                <div class="form-row">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your name" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+                    </div>
+                </div>
+                <div style="margin-bottom:12px;">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write a short message..." required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
+        <footer>
+            <span class="name">Abdi Dabala</span>
+            <span style="display:inline">© 2025 All rights reserved</span>
+        </footer>
+    </div>
+</body>
+</html>
