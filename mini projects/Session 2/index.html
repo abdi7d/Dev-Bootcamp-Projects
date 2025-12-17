@@ -1,52 +1,65 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Profile</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Personal Profile Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Abdi Dabala</h1>
+            <div class="role">Software Engineering Student</div>
+        </header>
 
-    <header>
-        <h1>Abdi Dabala</h1>
-        <p class="role">Software Engineering Student</p>
-    </header>
-
-    <main>
-        <section class="profile">
-            <img src="../assets/chala_image.png" alt="Profile Picture" class="profile-img">
+        <section class="profile" aria-label="Profile">
+            <div class="avatar">
+                <img src="../assets/chala_image.png" alt="Profile photo of Abdi Dabala">
+            </div>
             <div class="bio">
-                <h2>About Me</h2>
-                <p>Hi — I'm Abdi, a software engineering student passionate about building clean, accessible web interfaces and learning modern front-end techniques.
-                    I enjoy solving problems, collaborating on projects, and experimenting with UI/UX design.</p>
+                <p>
+                    Hi — I'm Abdi, a software engineering student passionate about building clean, accessible web interfaces and learning modern front-end techniques.
+                    I enjoy solving problems, collaborating on projects, and experimenting with UI/UX design.
+                </p>
             </div>
         </section>
 
-        <section class="skills-container">
-            <h2>My Skills</h2>
+        <section class="skills" aria-label="Skills">
+            <h2>Skills</h2>
             <div class="skills-grid">
-                <div class="skill-card">HTML5</div>
-                <div class="skill-card">CSS3</div>
-                <div class="skill-card">JavaScript</div>
-                <div class="skill-card">UI Design</div>
+                <div class="skill-item">HTML &amp; CSS</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">Responsive Design</div>
+                <div class="skill-item">Git &amp; GitHub</div>
             </div>
         </section>
 
-        <section class="contact">
-            <h2>Get In Touch</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="4" placeholder="Your Message"></textarea>
+        <section class="contact" aria-label="Contact">
+            <h2>Contact Me</h2>
+            <form action="#" method="post" novalidate>
+                <div class="form-row">
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" type="text" placeholder="Your name" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+                    </div>
+                </div>
+                <div style="margin-bottom:12px;">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write a short message..." required></textarea>
+                </div>
                 <button type="submit">Send Message</button>
             </form>
         </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2025 Abdi Dabala. All rights reserved.</p>
-    </footer>
-
+        <footer>
+            <span class="name">Abdi Dabala</span>
+            <span style="display:inline">© 2025 All rights reserved</span>
+        </footer>
+    </div>
 </body>
 </html>
