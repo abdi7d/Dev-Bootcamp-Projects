@@ -8,16 +8,20 @@
 -  **Session 2 :** [Personal Profile Page](https://github.com/abdi7d/Dev-Bootcamp-Projects/blob/main/mini%20projects/Session%202/personal_profile_page.html)
 
 
+-  **Session 3 :** [Toggle Text (ON / OFF)](https://github.com/abdi7d/Dev-Bootcamp-Projects/blob/main/mini%20projects/Session%203/toggle_text.html)
 
 
 
 
 
-## Mini Projects
 
-### **Session 1: Personal Profile**
 
-* **File / View Code:** [Personal Profile](https://github.com/abdi7d/Dev-Bootcamp-Projects/blob/main/mini%20projects/Session_1_personal_profile.html)
+
+### Mini Projects Description 
+
+##### **Session 1: Personal Profile**
+
+* **View Code:** [Personal Profile](https://github.com/abdi7d/Dev-Bootcamp-Projects/blob/main/mini%20projects/Session_1_personal_profile.html)
 * **Goal:** Practice basic HTML structure and tags by creating a simple personal profile page.
 * **Key Features:**
 
@@ -32,9 +36,9 @@
 
 ---
 
-### **Session 2: Personal Profile Page (HTML + CSS)**
+##### **Session 2: Personal Profile Page (HTML + CSS)**
 
-* **File / View Code:** [Personal Profile Page](https://github.com/abdi7d/Dev-Bootcamp-Projects/blob/main/mini%20projects/Session%202/personal_profile_page.html)
+* **View Code:** [Personal Profile Page](https://github.com/abdi7d/Dev-Bootcamp-Projects/blob/main/mini%20projects/Session%202/personal_profile_page.html)
 * **Goal:** Apply HTML, core CSS, and responsive design concepts to create a more advanced personal profile page.
 * **Key Sections & Features:**
 
@@ -59,7 +63,7 @@
 
 ---
 
-### **Mini Project: Toggle Text (ON / OFF)**
+##### **Mini Project: Toggle Text (ON / OFF)**
 
 * **View Code:** [Toggle Text (ON / OFF)](https://github.com/abdi7d/Dev-Bootcamp-Projects/blob/main/mini%20projects/Session%203/toggle_text.html)
 * **Goal:** Practice HTML, CSS, JavaScript DOM manipulation, and handling user interactions.
@@ -90,14 +94,13 @@
 
 
 
-
-
-
 ### **Technologies Used Across Projects**
 
-* HTML5
-* CSS3 (Flexbox, Grid, Responsive Design)
-* JavaScript (DOM manipulation, event handling)
+* **HTML5**
+* **CSS3** (Flexbox, Grid, Responsive Design)
+* **JavaScript** (DOM manipulation, event handling)
 
 ---
+
+
 
