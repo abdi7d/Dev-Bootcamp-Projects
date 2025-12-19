@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+#taskForm {
+  margin-bottom: 15px;
+}
+
+#taskInput {
+  padding: 6px;
+  width: 200px;
+}
+
+button {
+  padding: 6px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+#filters {
+  margin-bottom: 15px;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: gray;
+}
