@@ -5,90 +5,93 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Toggle Text (ON / OFF)</title>
     <style>
-        /* Basic resets and layout */
-        * { box-sizing: border-box; }
-        html,body { height: 100%; margin: 0; }
-        body {
-            font-family: "Segoe UI", Roboto, Arial, sans-serif;
-            background: linear-gradient(180deg,#eef2ff 0%, #f8fafc 100%);
-            color: #111827;
-        }
+       /* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Centering container using flexbox */
-        .center {
-            display: flex; /* flex requirement */
-            flex-direction: column; /* flex-direction requirement */
-            justify-content: center; /* justify-content requirement */
-            align-items: center; /* align-items requirement */
-            min-height: 100vh;
-            gap: 1.25rem; /* spacing between heading and button */
-            padding: 1rem;
-            text-align: center; /* text-align requirement */
-        }
+/* Flexbox Layout to center content */
+body {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;     /* Vertical centering */
+    min-height: 100vh;       /* Ensure it takes full screen height */
+    background-color: #f0f2f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        /* Heading */
-        h1 {
-            display: block; /* display requirement */
-            margin: 0;
-            font-size: 3rem; /* font-size requirement */
-            font-weight: 700; /* font-weight requirement */
-            text-transform: uppercase; /* text-transform requirement */
-            letter-spacing: 0.08em;
-            transition: color 150ms ease;
-            width: 100%;
-            max-width: 28rem;
-            word-break: keep-all;
-        }
+.container {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;
+    gap: 20px;               /* Spacing between heading and button */
+    padding: 20px;
+    text-align: center;
+}
 
-        /* Button */
-        .toggle-btn {
-            display: inline-block; /* display requirement */
-            appearance: none;
-            border: none;
-            background: #0f172a;
-            color: #ffffff;
-            padding: 0.7rem 1.25rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: 0.5rem;
-            cursor: pointer;
-            box-shadow: 0 6px 18px rgba(2,6,23,0.12);
-            transition: transform 120ms ease, background 120ms ease;
-            min-width: 9rem;
-        }
-        .toggle-btn:active { transform: translateY(1px) scale(.997); }
+/* Heading Styling */
+h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #333;
+    transition: color 0.3s ease; /* Smooth color change */
+} 
 
-        /* Responsive sizing */
-        @media (max-width: 480px) {
-            h1 { font-size: 2rem; }
-            .toggle-btn { padding: 0.6rem 1rem; min-width: 7.5rem; font-size: 0.95rem; }
-        }
+/* Button Styling */
+button {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.1s;
+}
+
+button:active {
+    transform: scale(0.95); /* Button "press" effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 3rem;
+    }
+} 
     </style>
+    
 </head>
 <body>
-    <main class="center" role="main">
-        <h1 id="state">OFF</h1>
-        <button id="toggleBtn" class="toggle-btn" aria-pressed="false">Toggle</button>
-    </main>
 
+    <div class="container">
+        <h1 id="statusLabel">OFF</h1>
+
+        <button id="toggleBtn">Toggle</button>
+    </div>
     <script>
-        const heading = document.getElementById('state'); // element selection requirement
-        const btn = document.getElementById('toggleBtn');
-        let isOn = false; // state variable requirement
+// 1. Select the elements
+const statusLabel = document.getElementById('statusLabel');
+const toggleBtn = document.getElementById('toggleBtn');
 
-        function updateDisplay() {
-            heading.textContent = isOn ? 'ON' : 'OFF';
-            heading.style.color = isOn ? '#064e3b' : '#7f1d1d';
-            btn.setAttribute('aria-pressed', String(isOn));
-        }
-
-        btn.addEventListener('click', () => {
-            isOn = !isOn; // toggle state
-            updateDisplay();
-        });
-
-        // ensure initial state on load
-        updateDisplay();
+// 2. Add an event listener for the click action
+toggleBtn.addEventListener('click', function() {
+    
+    // 3. Logic: Check current state and toggle
+    if (statusLabel.textContent === 'OFF') {
+        statusLabel.textContent = 'ON';
+        statusLabel.style.color = '#28a745'; // Optional: Change color to green
+    } else {
+        statusLabel.textContent = 'OFF';
+        statusLabel.style.color = '#333';    // Reset to dark grey
+    }
+});
     </script>
-</body>
+
+</body> 
 </html>
