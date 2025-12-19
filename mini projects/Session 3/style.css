@@ -1,39 +1,39 @@
-/* General Reset */
+/* general Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Flexbox Layout to center content */
+/* flexbox Layout to Center content */
 body {
     display: flex;
-    justify-content: center; /* Horizontal centering */
-    align-items: center;     /* Vertical centering */
-    min-height: 100vh;       /* Ensure it takes full screen height */
+    justify-content: center; /* horizontal centering */
+    align-items: center;     /* vertical centering */
+    min-height: 100vh;       /* ensure it takes full screen height */
     background-color: #f0f2f5;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
     display: flex;
-    flex-direction: column;  /* Stack items vertically */
+    flex-direction: column;  /* stack items vertically */
     align-items: center;
-    gap: 20px;               /* Spacing between heading and button */
+    gap: 20px;               /* spacing between heading and button */
     padding: 20px;
     text-align: center;
 }
 
-/* Heading Styling */
+/* heading styling */
 h1 {
     font-size: 5rem;
     font-weight: 800;
     text-transform: uppercase;
     color: #333;
-    transition: color 0.3s ease; /* Smooth color change */
+    transition: color 0.3s ease; /* smooth color change */
 } 
 
-/* Button Styling */
+/* button styling */
 button {
     display: inline-block;
     padding: 12px 30px;
@@ -48,10 +48,10 @@ button {
 }
 
 button:active {
-    transform: scale(0.95); /* Button "press" effect */
+    transform: scale(0.95); /* button "press" effect */
 }
 
-/* Responsive adjustments */
+/* responsive adjustments */
 @media (max-width: 480px) {
     h1 {
         font-size: 3rem;
