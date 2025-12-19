@@ -3,18 +3,14 @@
 > **These are projects I worked on while learning at Dev-Bootcamp.**
 > > Each project helped me practice HTML, CSS, and JavaScript fundamentals, layout techniques, and responsive design.
 
+
 ### Mini Projects:
 - **Session 1 :**:[Personal Profile](https://github.com/abdi7d/Dev-Bootcamp-Projects/blob/main/mini%20projects/Session_1_personal_profile.html)
 -  **Session 2 :** [Personal Profile Page](https://github.com/abdi7d/Dev-Bootcamp-Projects/blob/main/mini%20projects/Session%202/personal_profile_page.html)
 
 
 -  **Session 3 :** [Toggle Text (ON / OFF)](https://github.com/abdi7d/Dev-Bootcamp-Projects/blob/main/mini%20projects/Session%203/toggle_text.html)
-
-
-
-
-
-
+---
 
 
 ### Mini Projects Description 
