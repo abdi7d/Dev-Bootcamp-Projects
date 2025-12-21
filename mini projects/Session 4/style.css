@@ -1,0 +1,360 @@
+:root {
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --secondary-color: #ec4899;
+    --bg-gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    --card-bg: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border-radius: 16px;
+    --shadow-sm: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    --danger: #ef4444;
+    --success: #22c55e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background: #eef2f6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* App Container */
+.app-container {
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 450px;
+    border-radius: 24px;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    padding: 2rem;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+/* Header */
+header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: var(--text-primary);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.date-display {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+/* Input Group */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 14px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+    color: var(--text-primary);
+}
+
+input[type="text"]:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+    background: #fff;
+}
+
+.add-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+}
+
+.add-btn:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.add-btn:active {
+    transform: translateY(0);
+}
+
+/* Stats Dashboard */
+.stats-dashboard {
+    background: #f8fafc;
+    border-radius: 16px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-value {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 500;
+}
+
+.progress-ring {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-ring svg {
+    transform: rotate(-90deg);
+}
+
+.progress-ring circle {
+    fill: none;
+    stroke-width: 8;
+    stroke-linecap: round;
+}
+
+.progress-ring .bg {
+    stroke: #e2e8f0;
+}
+
+.progress-ring .fg {
+    stroke: var(--success);
+    stroke-dasharray: 283;
+    /* 2 * PI * 45 */
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 0.5s ease;
+}
+
+.progress-ring .percent {
+    position: absolute;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+/* Todo List */
+.todo-list-wrapper {
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+    padding-right: 5px;
+    /* space for scrollbar */
+}
+
+/* Custom Scrollbar */
+.todo-list-wrapper::-webkit-scrollbar {
+    width: 6px;
+}
+
+.todo-list-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.todo-list-wrapper::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 10px;
+}
+
+.todo-list {
+    list-style: none;
+}
+
+.todo-item {
+    background: white;
+    border-bottom: 1px solid #f1f5f9;
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: slideIn 0.3s ease forwards;
+}
+
+.todo-item:last-child {
+    border-bottom: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideOut {
+    to {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+
+.todo-item.deleting {
+    animation: slideOut 0.3s ease forwards;
+}
+
+.todo-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.todo-text {
+    font-size: 1rem;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    word-break: break-word;
+}
+
+.check-circle {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #cbd5e1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.8rem;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+/* Completed State */
+.todo-item.completed .check-circle {
+    background: var(--success);
+    border-color: var(--success);
+}
+
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    margin-left: 10px;
+}
+
+.action-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 8px;
+    border-radius: 8px;
+    color: #94a3b8;
+    transition: all 0.2s ease;
+}
+
+.action-btn:hover {
+    background: #f1f5f9;
+    color: var(--text-primary);
+}
+
+.action-btn.delete-btn:hover {
+    color: var(--danger);
+    background: #fee2e2;
+}
+
+.action-btn.edit-btn:hover {
+    color: var(--primary-color);
+    background: #e0e7ff;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.empty-state i {
+    font-size: 3rem;
+    color: #e2e8f0;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1rem;
+}
+
+.clear-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    font-weight: 500;
+}
+
+.clear-btn:hover {
+    color: var(--danger);
+}
