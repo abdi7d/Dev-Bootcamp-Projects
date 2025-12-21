@@ -10,6 +10,7 @@
 
 
 -  **Session 3 :** [Toggle Text (ON / OFF)](https://github.com/abdi7d/Dev-Bootcamp-Projects/blob/main/mini%20projects/Session%203/toggle_text.html)
+-  **Session 4 :** [Todo List App](https://github.com/abdi7d/Dev-Bootcamp-Projects/tree/main/mini%20projects/Session%204)
 ---
 
 
@@ -85,6 +86,24 @@
 * Page loads → heading shows `OFF`
 * Click Toggle → heading changes to `ON`
 * Click Toggle again → heading changes back to `OFF`
+
+---
+
+##### **Session 4: Premium Todo List App**
+
+* **View Code:** [Todo List App](https://github.com/abdi7d/Dev-Bootcamp-Projects/tree/main/mini%20projects/Session%204)
+* **Goal:** Build a fully interactive Todo List Application using DOM manipulation, events, and dynamic UI updates.
+* **Key Features:**
+  * **Add Tasks:** Dynamic list item creation with input validation.
+  * **Task Management:** Mark as completed or delete tasks with smooth animations.
+  * **Statistics:** Real-time tracking of total and completed tasks with a progress ring.
+  * **Persistence:** Uses `localStorage` to save tasks across sessions.
+  * **Premium UI:** Modern aesthetics with glassmorphism and responsive design.
+* **JavaScript Concepts Applied:**
+  * JSON parsing and storage (`localStorage`)
+  * DOM manipulation (`createElement`, `classList`)
+  * Array high-order functions (`map`, `filter`)
+  * Event handling (`click`, `keypress`)
 
 ---
 
