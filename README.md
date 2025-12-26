@@ -142,7 +142,7 @@ You can build for production with `npm run build` and preview with `npm run prev
 
 **Session 6 — Express MVC Task**
 
-- **Directory**: [mini projects/session 6 express mvc task/README.md](session%206%20express%20mvc%20task/README.md)
+- **Directory**: [mini projects/session 6 express mvc task/README.md](mini%20projects/session%206%20express%20mvc%20task/)
 
 - **Main files**: [app.js](mini%20projects/session%206%20express%20mvc%20task/app.js), [routes/index.js](mini%20projects/session%206%20express%20mvc%20task/routes/index.js), [controllers/mainController.js](mini%20projects/session%206%20express%20mvc%20task/controllers/mainController.js), [models/dataModel.js](mini%20projects/session%206%20express%20mvc%20task/models/dataModel.js), [package.json](mini%20projects/session%206%20express%20mvc%20task/package.json)
 - **Base route**: `/api`
@@ -171,7 +171,7 @@ curl http://localhost:3000/api/time
 curl -X POST http://localhost:3000/api/echo -H "Content-Type: application/json" -d '{"name":"Alice"}'
 ```
 
-See the project README for more details: [mini projects/session 6 express mvc task/README.md](session%206%20express%20mvc%20task/README.md)
+See the project README for more details: [mini projects/session 6 express mvc task/README.md](mini%20projects/session%206%20express%20mvc%20task/README.md)
 
 ### **Technologies & Tools Used Across Projects**
 
