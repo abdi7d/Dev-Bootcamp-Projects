@@ -6,11 +6,12 @@
 
 ### Mini Projects:
 
-- **Session 1 :**:[Personal Profile](https://github.com/abdi7d/Dev-Bootcamp-Projects/blob/main/mini%20projects/Session_1_personal_profile.html)
-- **Session 2 :** [Personal Profile Page](https://github.com/abdi7d/Dev-Bootcamp-Projects/blob/main/mini%20projects/Session%202/personal_profile_page.html)
-
-- **Session 3 :** [Toggle Text (ON / OFF)](https://github.com/abdi7d/Dev-Bootcamp-Projects/blob/main/mini%20projects/Session%203/toggle_text.html)
-- **Session 4 :** [Todo List App](https://github.com/abdi7d/Dev-Bootcamp-Projects/tree/main/mini%20projects/Session%204)
+- **Session 1:** [Personal Profile](mini%20projects/Session_1_personal_profile.html)
+- **Session 2:** [Personal Profile Page](mini%20projects/Session%202/personal_profile_page.html)
+- **Session 3:** [Toggle Text (ON / OFF)](mini%20projects/Session%203/toggle_text.html)
+- **Session 4:** [Todo List App](mini%20projects/Session%204/)
+- **Session 5:** [React Todo App (Vite)](mini%20projects/Session%205%20mini%20project/)
+- **Session 6:** [Express MVC Task](mini%20projects/session%206%20express%20mvc%20task/)
 
 ---
 
@@ -94,7 +95,7 @@
 
 ---
 
-##### **Session 4: Premium Todo List App**
+##### **Session 4: Todo List App**
 
 - **View Code:** [Todo List App](https://github.com/abdi7d/Dev-Bootcamp-Projects/tree/main/mini%20projects/Session%204)
 - **Goal:** Build a fully interactive Todo List Application using DOM manipulation, events, and dynamic UI updates.
@@ -112,18 +113,38 @@
 
 ---
 
-### **Technologies Used Across Projects**
+##### **Session 5: React + Vite Todo App**
 
-- **HTML5**
-- **CSS3** (Flexbox, Grid, Responsive Design)
-- **JavaScript** (DOM manipulation, event handling)
+- **Directory**: [mini projects/Session 5 mini project](mini%20projects/Session%205%20mini%20project/)
+- **Goal:** Build a more advanced Todo manager using React, modern tooling (Vite), and component-based design.
+- **Tech stack:** React, React DOM, React Router, Vite, ESLint
+- **Key Features:**
+  - Component-based task list with add/delete/complete actions
+  - Routing with `react-router-dom` for multiple views/pages
+  - Development server via Vite and a production build script
+  - Linting with ESLint and project configuration present
+- **Notable files:**
+  - `package.json` — scripts: `dev`, `build`, `preview`, `lint`
+  - `index.html` — app entry
+  - `src/` — React source files (`App.jsx`, components, styles)
+  - `vite.config.js` — Vite configuration
+- **Run locally:**
+
+```bash
+cd "mini projects/Session 5 mini project"
+npm install
+npm run dev
+```
+
+You can build for production with `npm run build` and preview with `npm run preview`.
 
 ---
 
 **Session 6 — Express MVC Task**
 
-- **Directory**: [session 6 express mvc task/README.md](session%206%20express%20mvc%20task/README.md)
-- **Main files**: [app.js](session%206%20express%20mvc%20task/app.js), [routes/index.js](session%206%20express%20mvc%20task/routes/index.js), [controllers/mainController.js](session%206%20express%20mvc%20task/controllers/mainController.js), [models/dataModel.js](session%206%20express%20mvc%20task/models/dataModel.js), [package.json](session%206%20express%20mvc%20task/package.json)
+- **Directory**: [mini projects/session 6 express mvc task/README.md](session%206%20express%20mvc%20task/README.md)
+
+- **Main files**: [app.js](mini%20projects/session%206%20express%20mvc%20task/app.js), [routes/index.js](mini%20projects/session%206%20express%20mvc%20task/routes/index.js), [controllers/mainController.js](mini%20projects/session%206%20express%20mvc%20task/controllers/mainController.js), [models/dataModel.js](mini%20projects/session%206%20express%20mvc%20task/models/dataModel.js), [package.json](mini%20projects/session%206%20express%20mvc%20task/package.json)
 - **Base route**: `/api`
 - **Endpoints**: GET `/api/` (welcome), GET `/api/about`, GET `/api/contact`, GET `/api/time` (dynamic greeting + time), POST `/api/echo` (accepts JSON and echoes back)
 - **Responses**: All responses are JSON. Unknown routes return a JSON 404.
@@ -151,3 +172,15 @@ curl -X POST http://localhost:3000/api/echo -H "Content-Type: application/json" 
 ```
 
 See the project README for more details: [mini projects/session 6 express mvc task/README.md](session%206%20express%20mvc%20task/README.md)
+
+### **Technologies & Tools Used Across Projects**
+
+- **Languages:** HTML5, CSS3, JavaScript (ES6+)
+- **Styling & Layout:** Flexbox, CSS Grid, responsive design, CSS variables
+- **Frameworks & Libraries:** React, React Router
+- **Build & Tooling:** Vite, npm, ESLint, @vitejs/plugin-react
+- **Backend / Server:** Node.js, Express (Session 6 — API routes)
+- **Storage & Data:** localStorage for persistence, JSON for data exchange, Fetch API
+- **Testing & Debugging:** Browser DevTools, ESLint rules and linting scripts
+- **Version Control & Hosting:** Git, GitHub (repository + links)
+- **Best Practices:** Semantic HTML, accessibility basics, responsive images, component-based design
