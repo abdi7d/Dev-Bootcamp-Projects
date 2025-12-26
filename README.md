@@ -150,4 +150,4 @@ curl http://localhost:3000/api/time
 curl -X POST http://localhost:3000/api/echo -H "Content-Type: application/json" -d '{"name":"Alice"}'
 ```
 
-See the project README for more details: [session 6 express mvc task/README.md](session%206%20express%20mvc%20task/README.md)
+See the project README for more details: [mini projects/session 6 express mvc task/README.md](session%206%20express%20mvc%20task/README.md)
