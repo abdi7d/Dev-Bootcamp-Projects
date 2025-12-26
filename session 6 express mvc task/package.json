@@ -1,0 +1,12 @@
+{
+  "name": "session-6-express-mvc-task",
+  "version": "1.0.0",
+  "description": "Simple Express MVC example for Dev Bootcamp",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
